@@ -1,2 +1,3 @@
-require('./lib/jquery.js');
-require('./lib/angular.js');
+require('./core/jquery.js');
+require('./core/angular.js');
+require('./core/jquery-ui.js');
