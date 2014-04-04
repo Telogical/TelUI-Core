@@ -1,0 +1,14 @@
+{
+    "name": "TelUI-core",
+    "version": "0.0.1",
+    "private": true,
+
+    "dependencies": {
+
+    },
+
+    "devDependencies": {
+        "angularjs": "*",
+        "jqueryui-browser": "*"
+    }
+}

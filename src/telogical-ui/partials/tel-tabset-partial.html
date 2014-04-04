@@ -1,0 +1,8 @@
+<div data-ng-id="tabset" class="waffles">
+    <ul id="{{id}}_tabheaders" >
+        <li data-ng-repeat="tab in tabs">
+            <a id="{{tab.anchorId}}" href="#{{tab.panelId}}">{{tab.title}}</a>
+        </li>
+    </ul>
+    <div data-ng-transclude/>
+</div>

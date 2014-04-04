@@ -1,0 +1,41 @@
+<div data-ng-id="checkbox" class="waffles">
+    <div class="w-12 w-alpha w-omega ui-widget ui-checkbox w-v-1">
+        <div class="w-12 ui-checkbox-frame ui-corner-all">
+            <div class="w-2 w-alpha w-fix">
+                <input 
+                       id="{{id}}_input" 
+                       type="checkbox" 
+                       data-ng-model="value" 
+                       class="ui-helper-hidden-accessible"/>
+                <div 
+                     id="{{id}}_checkbox_frame" 
+                     class="ui-widget-content ui-corner-all ui-checkbox-display-frame">
+                    
+                    <span id="{{id}}_checkbox" class="ui-icon ui-checkbox-display"></span>
+                </div>
+            </div>
+            <div class="w-auto ui-checkbox-label-frame" >
+<!--    These are removed
+                <div ng-if="hoverbutton == 'true'">
+                    <div class="w-2  w-fix w-omega">
+                        <tel-button 
+                                    id="{{id}}_hoverbutton" 
+                                    css-class="ui-checkbox-hoverbutton" 
+                                    icon-primary="{{hoverbuttonIcon}}" 
+                                    label="{{hoverbuttonLabel}}" 
+                                    text="false" 
+                                    click="hoverbuttonClick()" 
+                                    appearance ="link" />
+                    </div>
+                </div>
+-->
+<!--                <div class="w-auto ">-->
+                    <label 
+                           id="{{id}}_label" 
+                           class="w-12 w-alpha w-omega ui-checkbox-label" 
+                           for="{{id}}_input">{{label}}</label>
+<!--                </div>-->
+            </div>
+        </div>
+    </div>
+</div>

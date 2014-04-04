@@ -1,0 +1,9 @@
+document.createElement('tel-button');
+document.createElement('tel-pane');
+document.createElement('tel-tab');
+document.createElement('tel-tabset');
+document.createElement('tel-checkbox');
+document.createElement('tel-combobox');
+document.createElement('tel-grid');
+document.createElement('tel-dialog');
+document.createElement('tel-text');

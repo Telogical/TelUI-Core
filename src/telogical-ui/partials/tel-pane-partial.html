@@ -1,0 +1,29 @@
+<div data-ng-id="pane" class="waffles">
+    <fieldset class="ui-widget ui-pane ui-corner-all w-12 w-alpha w-omega w-v-2 w-v_2 ">
+        <legend class="ui-corner-all ui-pane-legend">
+            <div class="w-2 w-fix w-alpha ui-pane-toggle-frame" data-ng-show="showVisibilityToggle">
+                <tel-button 
+                            id="{{id}}_visibilitytoggle" 
+                            text=false 
+                            icon-primary={{visibilityIcon}} 
+                            click="toggleVisiblity()" 
+                            class="ui-pane-legend-button" 
+                            type="checkbox"
+                            value="visible"
+                            css-class="ui-pane-toggle-button">
+                </tel-button>
+            </div>
+            <div class="w-auto">
+                <label id="{{id}}_header" class="ui-pane-legend-header ui-priority-{{priority}}">{{title}}</label>
+            </div>
+        </legend>
+        <div id="{{id}}_pane" class="w-12 w-alpha w-omega">
+            <div class="w-2 w-fix w-alpha ui-pane-indention" data-ng-if="hasIndention">
+                <div class="ui-pane-indention-treeline" data-ng-if="indentionHasTreeline">&nbsp;</div>
+            </div>
+            <div class="w-auto ui-pane-viewport">
+                <div class="w-12 w-alpha w-omega ui-pane-viewport-content" data-ng-transclude ></div>
+            </div>
+        </div>
+    </fieldset>
+</div>

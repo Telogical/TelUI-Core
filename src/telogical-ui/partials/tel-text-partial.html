@@ -1,0 +1,57 @@
+<div data-ng-id="text" class="waffles">
+    <div class="ui-widget ui-text ui-text-frame">
+        <div class="w-12 w-alpha w-omega">
+            <label id="{{id}}_label" for="{{id}}_input">{{label}}</label>
+        </div>
+        <div class="w-12 w-alpha w-omega w-v-1">
+            <div class="ui-text-closeicon-frame">
+                <span 
+                      class="ui-icon ui-icon-close ui-text-closeicon" 
+                      data-ng-show="searchClearIcon" 
+                      data-ng-click="clearbox()" 
+                      data-ng-cloak>
+                </span>
+            </div>
+            
+            <!--[if lte IE 9]>
+            <div 
+                 class="ui-shim-placeholder-frame" 
+                 data-ng-show="!_model.value"
+                 data-ng-click="focusInput()">
+                <div class="ui-shim-placeholder"  >{{placeholder}}</div>
+            </div>
+            <![endif]-->
+
+            <input 
+                   id="{{id}}_input" 
+                   data-ng-if="!multiline" 
+                   data-ng-model="_model.value"
+                   placeholder="{{placeholder}}"
+                   type="text" 
+                   maxlength="{{maxlength}}" 
+                   data-ng-trim='{{ngTrim}}'
+                   data-validation-value="{{_model.value}}"
+                   data-ng-validate="{{validationSettings}}"
+                   />
+                        
+            <textarea 
+                      id="{{id}}_input" 
+                      class='ui-corner-all' 
+                      data-ng-if="multiline" 
+                      rows="{{rows}}" 
+                      data-ng-model="_model.value"
+                      placeholder="{{placeholder}}"
+                      maxlength="{{maxlength}}" 
+                      data-ng-trim='{{ngTrim}}'
+                      data-validation-value="{{_model.value}}"
+                      data-ng-validate="{{validationSettings}}"
+                    ></textarea>
+
+            <div class="w-12 w-alpha w-omega w-v-2 w-v_2" data-ng-show="validation.message">
+                <div class="ui-state-error ui-corner-all" id="{{id}}_errormessage">
+                    {{validation.message}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
