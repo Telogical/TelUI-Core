@@ -15,7 +15,7 @@
     },
 
     "browser":{
-        "jquery":"./core/jquery.js"
+        "jquery":"./core/jquery.js",
         "jquery-ui":"./core/jquery-ui.js",
         "angular": "./core/angular.js"
     },
