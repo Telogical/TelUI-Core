@@ -15,14 +15,10 @@
     },
 
     "browser":{
-        "jquery":"./core/jquery.js",
-        "jquery-ui":"./core/jquery-ui.js",
-        "angular": "./core/angular.js"
+        "jquery":"./core/jquery.js"
     },
 
     "browserify-shim":{
-        "jquery":"$",
-        "jquery-ui": { "depends": ["jquery"] },
-        "angular": {"exports":"angular", "depends": ["jquery"]}
+        "jquery":"$"
     }
 }
