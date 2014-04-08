@@ -1,3 +1,1 @@
-require('./core/jquery.js');
-require('./core/angular.js');
-require('./core/jquery-ui.js');
+//This is a fake file cause stupid.
