@@ -1,6 +1,6 @@
 {
     "name": "TelUI-core",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "private": true,
 
     "dependencies": {
@@ -23,6 +23,6 @@
     "browserify-shim":{
         "jquery":"$",
         "jquery-ui": { "depends" : ["jquery"] },
-        "angular": { "exports" : "angular", "depends" : ["jquery":"$"] }
+        "angular": { "exports" : "angular", "depends" : ["jquery:$"] }
     }
 }
