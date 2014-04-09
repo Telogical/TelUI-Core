@@ -31,7 +31,7 @@
     "browserify-shim":{
         "jquery":"$",
         "jquery-ui": { "depends" : ["jquery"] },
-        "angular": { "exports" : "angular", "depends" : ["jquery:$"] }
+        "angular": { "exports" : "angular", "depends" : ["jquery:$"] },
         "angular-animate":{},
     	"angular-cookies":{},
     	"angular-placeholder-shim":{},
