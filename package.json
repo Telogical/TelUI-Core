@@ -1,6 +1,6 @@
 {
     "name": "TelUI-core",
-    "version": "0.0.21",
+    "version": "0.0.211",
     "private": true,
 
     "dependencies": {
@@ -9,7 +9,7 @@
     "devDependencies": {
         "lodash":"*"
     },
-    
+
     "main":"./core.js",
 
     "browserify":{
@@ -23,7 +23,7 @@
         "angular-animate": "./lib/angular/angular-animate.js",
     	"angular-cookies": "./lib/angular/angular-cookies.js",
     	"angular-placeholder-shim": "./lib/angular/angular-placeholder-shim.js",
-    	"angular-resource": "./lib/angular/angular-resource.js",    	
+    	"angular-resource": "./lib/angular/angular-resource.js",
         "angular-route": "./lib/angular/angular-route.js",
     	"angular-sanitize": "./lib/angular/angular-sanitize.js"
     },
@@ -32,11 +32,11 @@
         "jquery":"$",
         "jquery-ui": { "depends" : ["jquery"] },
         "angular": { "exports" : "angular", "depends" : ["jquery:$"] },
-        "angular-animate":{},
-    	"angular-cookies":{},
-    	"angular-placeholder-shim":{},
-    	"angular-resource":{},    	
-        "angular-route":{},
-    	"angular-sanitize":{}
+        "angular-animate": { "depends" : ["angular"] },
+    	"angular-cookies": { "depends" : ["angular"] },
+    	"angular-placeholder-shim": { "depends" : ["angular"] },
+    	"angular-resource": { "depends" : ["angular"] },
+        "angular-route": { "depends" : ["angular"] },
+    	"angular-sanitize": { "depends" : ["angular"] }
     }
 }
