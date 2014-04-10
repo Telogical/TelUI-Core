@@ -1,6 +1,6 @@
 {
     "name": "TelUI-core",
-    "version": "0.0.211",
+    "version": "0.0.212",
     "private": true,
 
     "dependencies": {
@@ -14,6 +14,10 @@
 
     "browserify":{
         "transform":["browserify-shim"]
+    },
+
+    "aliases":{
+        "angular/angular-route" : "./lib/angular/angular-route.js"
     },
 
     "browser":{
