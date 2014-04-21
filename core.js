@@ -3,4 +3,4 @@ require('jquery');
 require('jquery-ui');
 require('angular');
 
-angular.module('Telogical', []);
+angular.module('TelUI', []);
