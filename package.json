@@ -1,6 +1,6 @@
 {
-    "name": "TelUI-core",
-    "version": "0.0.213",
+    "name": "TelUI-Core",
+    "version": "0.0.3",
     "private": true,
 
     "dependencies": {
