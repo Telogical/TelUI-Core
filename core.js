@@ -3,4 +3,9 @@ require('jquery');
 require('jquery-ui');
 require('angular');
 
-angular.module('TelUI', []);
+try{
+	angular.module('TelUI');
+}
+catch(err){
+	angular.module('TelUI', []);
+}
