@@ -1,5 +1,8 @@
 //This will be a service of Telogical level formatters.
-TelRender
+
+
+angular
+    .module('TelUI')
     .service('TelRenderDisplay', [
 
         function () {
