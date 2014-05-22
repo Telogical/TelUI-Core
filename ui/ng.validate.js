@@ -1,4 +1,7 @@
-TelogicalUi
+var _ = require('lodash');
+
+angular
+    .module('TelUI')
     .directive('ngValidate',['ValidationCore', function (ValidationCore) {
         'use strict';
         return {
