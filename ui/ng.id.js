@@ -33,7 +33,9 @@ angular
                         id = id.toLowerCase();
 
                         $scope.id = id;
-                    }
+                    } else {
+		    	$attrs.id = $attrs.id.toLowerCase();
+		    }
                 }
 
                 return {
