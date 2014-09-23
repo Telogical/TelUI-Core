@@ -1,6 +1,7 @@
 // creative the directives as re-usable components
 
-TelogicalUi
+angular
+    .module('TelUI')
     .directive('imageFix', [
         function () {
             'use strict';
