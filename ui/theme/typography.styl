@@ -1,4 +1,11 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,700,800,400,600");
 
+$brick ?= 30px;
+$line ?= $brick * 0.5; 
+$font-size ?= $line;
+$font-family = 'Open Sans', sans-serif;
+
+_paragraph-margin = $line;
 
 /*Icons*/
 
@@ -10,28 +17,55 @@
   font-style: normal;
 }
 
+
+
+body {
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line;
+}
+
+p, label {
+  
+  
+}
+p ~ p {
+  margin-top: $line;
+}
+
 h1 {
-  text-align: center;
-  color: #666;
-  font-family: $specialFontFamily;
-  word-spacing: 3pt;
-  letter-spacing: 1.5pt;
-  font-size: 16px;
+  line-height: $line * 3.5;
+  font-size: $font-size * 3.5;
 }
 
 h2 {
-
-  color: $themeTextColor;
-  font-family: $specialFontFamily;
-  font-size: 18px;
-  word-spacing: 1.5pt;
-  letter-spacing: 1.1pt;
-  color: #666;
+  line-height: $line * 2.75;
+  font-size: $font-size * 2.75;
 }
 
+h3 {
+  line-height: $line * 2;
+  font-size: $font-size * 2;
+}
+
+h4 {
+  line-height: $line * 1.5;
+  font-size: $font-size * 1.5;
+}
+
+h5 {
+  line-height: $line * 1.25;
+  font-size: $font-size * 1.25;
+}
+
+h6 {
+  line-height: $line;
+  font-size: $font-size;
+}
+
+/*helpers*/
 .ui-typography-textalign-center {
   text-align: center;
-
 }
 
 .ui-typography-textalign-top {
@@ -53,5 +87,7 @@ h2 {
 .ui-typography-uppercase {
   text-transform: uppercase;
 }
+
+
 
 
