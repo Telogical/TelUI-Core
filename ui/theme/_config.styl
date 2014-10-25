@@ -1,8 +1,8 @@
 support-for-ie ?= true
 
-$brick = 32px /*Worldspace Brick Size. Change this to anything.*/
+$brick = 28px /*Worldspace Brick Size. Change this to anything.*/
 $line = ($brick * 0.618); /*Text to brick ratio. Try 0.618, 0.5, 0.75. Do not exceed 1*/
-$border-width = 1px;
+$border-width = 2px;
 $line-height = $brick - $border-width;
 
 
@@ -12,15 +12,16 @@ $border-radius = 4px;
 
 
 /*Core color levels*/
-$color-stateless = gray;
+$color-stateless = #555;
+$color-default = #777;
 $color-error = red;
 $color-highlight = orange;
 $color-success = green;
 $color-advantage = #0000ff;
 
-.ui-state-disabled {
-  opacity: 0.4
-}
+/*interactivity*/
+$color-hover = blue;
+$color-focus = green;
 
 /*debugging and layout*/
 .brick {

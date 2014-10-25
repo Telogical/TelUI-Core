@@ -1,0 +1,37 @@
+.ui-menu
+  background : rgba(255,255,255,0.85)
+  list-style: none;
+  display: block;
+  outline: none;
+  box-shadow: 5px 5px 5px 1px rgba(0,0,0,0.4);
+  border-bottom-radius: $border-radius
+  border-style: solid;
+  border-color: $color-stateless;
+  border-width: $border-width;
+  border-top-width: 0px;
+ 
+.ui-menu:hover
+  background : rgba(255,255,255,1)
+
+.ui-menu-item
+  height:$brick
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: $line;
+  font-family: $font-family;
+  a
+    box-sizing();
+    line-height: $line-height;
+    font-size: $line;
+    min-height: $line-height;
+    display: block;
+    padding: 0;
+    margin: 0 auto;
+    cursor: pointer;
+    vertical-align: middle;
+    text-indent: $line
+.ui-menu-item:hover
+  background-color: $color-default
+  color: #eee
+  

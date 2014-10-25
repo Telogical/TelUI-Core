@@ -6,3 +6,93 @@ box-sizing()
   -moz-box-sizing: border-box; 
   -webkit-box-sizing: border-box; 
   box-sizing: border-box;
+
+ui-states-interactive(root, selectors, ui-states, tolerance)
+  for selector in selectors
+    for key, ui-state in ui-states
+      stateSelector = '.ui-state-' + key
+      up = lighten(desaturate(ui-state, (tolerance * 0.7)), (tolerance* 0.3))
+      down = darken(saturate(ui-state, (tolerance * 0.8)), (tolerance* 0.2))
+      settext(color)
+        if light(color)
+          color: #111
+        else
+          color: #eee
+      state-default()
+        settext(down);
+        background: up; 
+        border-width: $border-width;
+        border-color: down; 
+        border-style: $border-style;
+        transition: all ease 750ms;
+      state-disabled()
+        opacity: 0.5;
+        cursor: not-allowed;
+        input, textarea, label, span
+          cursor: not-allowed;
+      state-hover()
+        settext(down);
+        background: ui-state;
+        border-color: up;
+      state-active()
+        settext(down);
+        background: down;
+        border-color: down;
+      state-activehover()
+        settext(down);
+        background: down;
+        border-color: ui-state;
+      {root}
+        &{stateSelector}
+          {selector}
+            state-default() 
+          {selector}.ui-state-hover,
+          {selector}:hover
+            state-default()
+            state-hover()
+          {selector}.ui-state-active,
+          {selector}:active,
+          {selector}:focus
+            state-default()
+            state-active()
+          {selector}.ui-state-active.ui-state-hover,
+          {selector}:hover:active,
+          {selector}:hover:focus
+            state-active()
+      {root}.ui-state-disabled,
+      {root}:disabled
+        state-disabled()
+        &{stateSelector}
+          {selector},
+          {selector}.ui-state-hover,
+          {selector}:hover,
+          {selector}.ui-state-active,
+          {selector}:active,
+          {selector}:focus
+            state-disabled()
+            state-default()
+          
+ui-states-static(root, selectors, ui-states, tolerance)
+  for selector in selectors
+    for key, ui-state in ui-states
+      stateSelector = '.ui-state-' + key
+      up = lighten(desaturate(ui-state, (tolerance * 0.7)), (tolerance* 0.3))
+      down = darken(saturate(ui-state, (tolerance * 0.8)), (tolerance* 0.2))
+      state-default()
+        if light(ui-state)
+          color: down
+        else
+          color: ui-state
+      state-disabled()
+        opacity: 0.5;
+        cursor: not-allowed;
+      {root}
+        &{stateSelector}
+          {selector}
+            state-default() 
+      {root}.ui-state-disabled,
+      {root}:disabled
+        &{stateSelector}
+          {selector}
+            state-disabled()
+            state-default()  
