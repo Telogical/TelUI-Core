@@ -7,92 +7,58 @@ box-sizing()
   -webkit-box-sizing: border-box; 
   box-sizing: border-box;
 
-ui-states-interactive(root, selectors, ui-states, tolerance)
+legibleTextColor(color)
+  if light(color)
+    color: #111;
+  else
+    color: #eee;
+
+
+
+ui-states(root, selectors, ui-states, i-states, tolerance)
   for selector in selectors
     for key, ui-state in ui-states
       stateSelector = '.ui-state-' + key
-      up = lighten(desaturate(ui-state, (tolerance * 0.7)), (tolerance* 0.3))
-      down = darken(saturate(ui-state, (tolerance * 0.8)), (tolerance* 0.2))
-      settext(color)
-        if light(color)
-          color: #111
-        else
-          color: #eee
-      state-default()
-        settext(down);
-        background: up; 
-        border-width: $border-width;
-        border-color: down; 
-        border-style: $border-style;
-        transition: all ease 750ms;
-      state-disabled()
-        opacity: 0.5;
-        cursor: not-allowed;
-        input, textarea, label, span
-          cursor: not-allowed;
-      state-hover()
-        settext(down);
-        background: ui-state;
-        border-color: up;
-      state-active()
-        settext(down);
-        background: down;
-        border-color: down;
-      state-activehover()
-        settext(down);
-        background: down;
-        border-color: ui-state;
-      {root}
-        &{stateSelector}
-          {selector}
-            state-default() 
-          {selector}.ui-state-hover,
-          {selector}:hover
-            state-default()
-            state-hover()
-          {selector}.ui-state-active,
-          {selector}:active,
-          {selector}:focus
-            state-default()
-            state-active()
-          {selector}.ui-state-active.ui-state-hover,
-          {selector}:hover:active,
-          {selector}:hover:focus
-            state-active()
-      {root}.ui-state-disabled,
-      {root}:disabled
-        state-disabled()
-        &{stateSelector}
-          {selector},
-          {selector}.ui-state-hover,
-          {selector}:hover,
-          {selector}.ui-state-active,
-          {selector}:active,
-          {selector}:focus
-            state-disabled()
-            state-default()
-          
-ui-states-static(root, selectors, ui-states, tolerance)
-  for selector in selectors
-    for key, ui-state in ui-states
-      stateSelector = '.ui-state-' + key
-      up = lighten(desaturate(ui-state, (tolerance * 0.7)), (tolerance* 0.3))
-      down = darken(saturate(ui-state, (tolerance * 0.8)), (tolerance* 0.2))
-      state-default()
-        if light(ui-state)
-          color: down
-        else
-          color: ui-state
-      state-disabled()
-        opacity: 0.5;
-        cursor: not-allowed;
-      {root}
-        &{stateSelector}
-          {selector}
-            state-default() 
-      {root}.ui-state-disabled,
-      {root}:disabled
-        &{stateSelector}
-          {selector}
-            state-disabled()
-            state-default()  
+      for ikey, i-state in i-states
+        {root}
+            &{stateSelector}
+              {selector}.ui-state-{ikey}
+                i-state(ui-state, tolerance)
+              //{selector}:{ikey},
+              //{selector}[ikey]
+                //i-state(ui-state, tolerance)
+
+
+
+
+opacity(n)  
+  -moz-opacity n
+  -khtml-opacity n  
+  opacity n
+  if support-for-ie
+    -ms-filter unquote('"progid:DXImageTransform.Microsoft.Alpha(Opacity=' + round(n * 100) + ')"')
+    filter unquote('alpha(opacity=' + round(n * 100) + ')')
+ 
+
+  /*
+  background-color: transparent;
+  background-color: rgba(0,0,0,0.3);
+  */
+
+  /*
+  zoom: 1;
+  filter: unquote('alpha(opacity=50)');
+  opacity: 0.5;
+  */
+
+  /*
+  -ms-filter unquote('"progid:DXImageTransform.Microsoft.Alpha(Opacity=' + round(n * 100) + ')"')
+  filter unquote('alpha(opacity=' + round(n * 100) + ')')
+  -moz-opacity n
+  -khtml-opacity n  
+  opacity n  
+  */
+           
+
+      
+              

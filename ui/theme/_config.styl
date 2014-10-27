@@ -1,27 +1,32 @@
-support-for-ie ?= true
+support-for-ie = true;
 
 $brick = 28px /*Worldspace Brick Size. Change this to anything.*/
 $line = ($brick * 0.618); /*Text to brick ratio. Try 0.618, 0.5, 0.75. Do not exceed 1*/
-$border-width = 2px;
+$border-width = 1px;
+$border-radius = 4px;
+
+
 $line-height = $brick - $border-width;
-
-
 $line-margin ?= ($brick - $line - $border-width) * 0.5; /*do not alter this, it should always be half*/
 
-$border-radius = 4px;
+$interactivityTolerance = 40%;
+$disableAmount = 0.5;
 
 
 /*Core color levels*/
 $color-stateless = #555;
-$color-default = #777;
-$color-error = red;
-$color-highlight = orange;
-$color-success = green;
-$color-advantage = #0000ff;
+$color-default = #bdc3c7;
+$color-error = #e74c3c;
+$color-highlight = #f1c40f;
+$color-success = #2ecc71;
+$color-advantage = #3498db;
+
+
 
 /*interactivity*/
 $color-hover = blue;
 $color-focus = green;
+
 
 /*debugging and layout*/
 .brick {
@@ -29,6 +34,7 @@ $color-focus = green;
   height: $brick;
   width:100%;
   float:left;
+  background-color: pink;
 }
 
 
