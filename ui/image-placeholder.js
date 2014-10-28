@@ -14,12 +14,14 @@ angular
                     $scope.$elParent = $element.parent();
                     $scope.$errorLabel = $('<span class="ui-imagefix-label ui-priority-foreground ui-typography-textalign-center"></span>');
 
-                    function replaceImageWithText() {
-                        $element.hide();
-                        var title = $element.attr('alt') || $element.attr('title') || 'No Image';
-                        $scope.$errorLabel.text(title);
-                        $scope.$errorLabel.show();
-                    }
+                     function replaceImageWithText() {
+                        setTimeout(function () {
+                            $element.hide();
+                            var title = $element.attr('alt') || $element.attr('title') || 'No Image';
+                            $scope.$errorLabel.text(title);
+                            $scope.$errorLabel.show();
+                        });
+					}
 
                     function restoreImage() {
                         if ($element.is(':hidden')) {
