@@ -15,6 +15,7 @@ angular
                     $scope.$errorLabel = $('<span class="ui-imagefix-label ui-priority-foreground ui-typography-textalign-center"></span>');
 
                      function replaceImageWithText() {
+                     	// TODO: Research alternatives to the setTimeout later on
                         setTimeout(function () {
                             $element.hide();
                             var title = $element.attr('alt') || $element.attr('title') || 'No Image';
