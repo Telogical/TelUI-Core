@@ -1,20 +1,26 @@
 support-for-ie = true;
 
-$brick = 28px /*Worldspace Brick Size. Change this to anything.*/
-$line = ($brick * 0.618); /*Text to brick ratio. Try 0.618, 0.5, 0.75. Do not exceed 1*/
-$border-width = 1px;
+$brick = 30px /*Worldspace Brick Size. Change this to anything.*/
+
+_lineRatio = 0.618; /*Text to brick ratio. Try 0.618, 0.5, 0.75. Do not exceed 1*/
+
+$line = ($brick * _lineRatio); 
+$sub-line = ($line * _lineRatio);
+
+$border-width = 2px;
 $border-radius = 4px;
 
 
 $line-height = $brick - $border-width;
 $line-margin ?= ($brick - $line - $border-width) * 0.5; /*do not alter this, it should always be half*/
+$sub-line-margin = -1 * $border-width;
 
-$interactivityTolerance = 40%;
+$interactivityTolerance = 65%;
 $disableAmount = 0.5;
-
+$transitionSpeed = 0.5s;
 
 /*Core color levels*/
-$color-stateless = #555;
+
 $color-default = #bdc3c7;
 $color-error = #e74c3c;
 $color-highlight = #f1c40f;
@@ -22,10 +28,13 @@ $color-success = #2ecc71;
 $color-advantage = #3498db;
 
 
-
-/*interactivity*/
-$color-hover = blue;
-$color-focus = green;
+$ui-states = {
+  'default' : $color-default,
+  'error' : $color-error,
+  'highlight' : $color-highlight,
+  'success' : $color-success,
+  'advantage': $color-advantage
+};
 
 
 /*debugging and layout*/

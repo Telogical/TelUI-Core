@@ -1,0 +1,18 @@
+sizeIt(size)
+  width: size;
+  height: size;
+  font-size: size;  
+  line-height: size;
+.ui-size-tiny
+  sizeIt($sub-line);
+.ui-size-small
+  sizeIt($line);
+
+.ui-size-large
+  sizeIt($brick + $line);
+
+.ui-size-jumbo
+  sizeIt($brick * 2);
+
+.ui-size-colossal
+  sizeIt($brick * 4);

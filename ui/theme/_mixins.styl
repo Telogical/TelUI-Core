@@ -14,7 +14,6 @@ legibleTextColor(color)
     color: #eee;
 
 
-
 ui-states(root, selectors, ui-states, i-states, tolerance)
   for selector in selectors
     for key, ui-state in ui-states
@@ -22,14 +21,12 @@ ui-states(root, selectors, ui-states, i-states, tolerance)
       for ikey, i-state in i-states
         {root}
             &{stateSelector}
-              {selector}.ui-state-{ikey}
-                i-state(ui-state, tolerance)
-              //{selector}:{ikey},
-              //{selector}[ikey]
-                //i-state(ui-state, tolerance)
-
-
-
+              if ikey != 'focus'
+                {selector}.ui-state-{ikey}
+                  i-state(ui-state, tolerance, key, ikey)
+              if ikey != 'default'
+                {selector}:{ikey}
+                  i-state(ui-state, tolerance, key, ikey)
 
 opacity(n)  
   -moz-opacity n
@@ -39,26 +36,7 @@ opacity(n)
     -ms-filter unquote('"progid:DXImageTransform.Microsoft.Alpha(Opacity=' + round(n * 100) + ')"')
     filter unquote('alpha(opacity=' + round(n * 100) + ')')
  
-
-  /*
-  background-color: transparent;
-  background-color: rgba(0,0,0,0.3);
-  */
-
-  /*
-  zoom: 1;
-  filter: unquote('alpha(opacity=50)');
-  opacity: 0.5;
-  */
-
-  /*
-  -ms-filter unquote('"progid:DXImageTransform.Microsoft.Alpha(Opacity=' + round(n * 100) + ')"')
-  filter unquote('alpha(opacity=' + round(n * 100) + ')')
-  -moz-opacity n
-  -khtml-opacity n  
-  opacity n  
-  */
-           
+   
 
       
               
