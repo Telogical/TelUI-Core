@@ -1,14 +1,14 @@
 support-for-ie = true;
 
-$brick = 30px /*Worldspace Brick Size. Change this to anything.*/
+$brick ?= 28px /*Worldspace Brick Size. Change this to anything.*/
 
-_lineRatio = 0.618; /*Text to brick ratio. Try 0.618, 0.5, 0.75. Do not exceed 1*/
+_lineRatio ?= 0.618; /*Text to brick ratio. Try 0.618, 0.5, 0.75. Do not exceed 1*/
 
-$line = ($brick * _lineRatio); 
-$sub-line = ($line * _lineRatio);
+$line ?= ($brick * _lineRatio); 
+$sub-line ?= ($line * _lineRatio);
 
-$border-width = 2px;
-$border-radius = 4px;
+$border-width ?= 1px;
+$border-radius ?= 4px;
 
 
 $line-height = $brick - $border-width;
