@@ -64,31 +64,51 @@ h6 {
   font-size: $font-size;
 }
 
-/*helpers*/
-.ui-typography-textalign-center {
-  text-align: center;
-}
+dt-width = $brick * 7;
+_list-color = darken($color-default, $interactivityTolerance)
 
-.ui-typography-textalign-top {
-  vertical-align: top;
-}
-
-.ui-typography-textalign-right {
+dl
+  border: $border-width solid $color-default;
+  padding: $line-margin;
+  border-radius: $border-radius
+  
+dt
+  padding: $line-margin;
+  float: left;
+  clear: left;
+  width: dt-width;
   text-align: right;
-}
+  margin: 0 $line-margin;
+  color: _list-color;
+  min-height: $brick;
+    
+dd 
+  margin: 0 0 0 (dt-width + $line-margin);
+  padding: $line-margin;
+  min-height: $brick;
 
-.ui-typography-textalign-left {
+dd > ul
+  list-style: none;
+  >li
+    &:before 
+      content: "• ";
+      color: _list-color;
+
+/*helpers*/
+.ui-typography-textalign-center 
+  text-align: center;
+
+.ui-typography-textalign-top 
+  vertical-align: top;
+
+.ui-typography-textalign-right 
+  text-align: right;
+
+.ui-typography-textalign-left 
   text-align: left;
-}
 
-.ui-typography-textalign-center.ui-icon {
+.ui-typography-textalign-center.ui-icon 
   display: inline-block;
-}
 
-.ui-typography-uppercase {
+.ui-typography-uppercase 
   text-transform: uppercase;
-}
-
-
-
-

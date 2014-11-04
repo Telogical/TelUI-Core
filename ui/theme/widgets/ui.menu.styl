@@ -1,5 +1,5 @@
 .ui-menu
-  background : rgba(255,255,255,0.85)
+  background: rgba(255,255,255,0.85)
   list-style: none;
   display: block;
   outline: none;
@@ -11,10 +11,10 @@
   border-top-width: 0px;
  
 .ui-menu:hover
-  background : rgba(255,255,255,1)
+  background: rgba(255,255,255,1)
 
 .ui-menu-item
-  height:$brick
+  min-height: $brick;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -26,12 +26,21 @@
     font-size: $line;
     min-height: $line-height;
     display: block;
-    padding: 0;
-    margin: 0 auto;
+    padding: $line-margin;
+    margin: 0;
     cursor: pointer;
     vertical-align: middle;
-    text-indent: $line
-.ui-menu-item:hover
-  background-color: $color-default
-  color: #eee
+    text-indent: $line-margin
+
+.ui-menu
+  .ui-menu-item > a:hover,
+  .ui-menu-item > a.ui-state-hover
+    background-color: $color-default
+    color: #eee
+
+  .ui-menu-item > a:focus,
+  .ui-menu-item > a.ui-state-focus,
+  .ui-menu-item > a.ui-state-active
+    background-color: $color-default
+    color: #eee
   
