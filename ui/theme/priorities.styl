@@ -1,7 +1,11 @@
-.ui-priority-primary {
-  font-weight: bold;
-}
+_priority-tolerance = 30%
 
-.ui-priority-secondary {
+.ui-priority-primary 
+  font-weight: 600;
+  color: darken($color, _priority-tolerance);
+
+
+.ui-priority-secondary 
   font-style: italic;
-}
+  font-weight: 300;
+  color: lighten($color, _priority-tolerance);

@@ -23,6 +23,8 @@ body {
   font-family: $font-family;
   font-size: $font-size;
   line-height: $line;
+  font-size: $brick * 0.5;
+  color: $color;
 }
 
 p, label {
@@ -81,11 +83,13 @@ dt
   margin: 0 $line-margin;
   color: _list-color;
   min-height: $brick;
+  
     
 dd 
   margin: 0 0 0 (dt-width + $line-margin);
   padding: $line-margin;
   min-height: $brick;
+  
 
 dd > ul
   list-style: none;
