@@ -1,0 +1,27 @@
+{
+  "name": "@telogical/telui-core",
+  "version": "1.0.3",
+  "description": "The core module for telui components. Includes angular, react, lodash.",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Telogical/telui-core.git"
+  },
+  "keywords": [
+    "telui"
+  ],
+  "author": "jharlin@telogical.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Telogical/telui-core/issues"
+  },
+  "dependencies": {
+    "lodash": "*",
+    "angular": "1.2.x",
+    "react" : "0.12.x"
+  },
+  "homepage": "https://github.com/Telogical/telui-core"
+}
