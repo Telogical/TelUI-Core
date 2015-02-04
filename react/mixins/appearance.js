@@ -1,6 +1,3 @@
-var React = require('react/addons');
-var _ = require('lodash');
-
 function Appearance() {
   'use strict';
 

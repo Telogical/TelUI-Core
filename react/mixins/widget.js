@@ -1,5 +1,3 @@
-var React = require('react/addons');
-
 function Widget() {
   'use strict';
 
