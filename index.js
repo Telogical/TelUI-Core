@@ -1,7 +1,9 @@
 require('./compatibility');
 
+var UI = require('./react/telui.js');
 
-global.UI = require('./react/telui.js');
-global.React = require('react/addons');
-global._ = require('lodash');
-global.angular = require('angular');
+
+
+angular.module('TelUI', []);
+
+module.exports = UI;

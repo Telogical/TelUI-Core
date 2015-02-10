@@ -1,5 +1,8 @@
-function Appearance() {
+function Appearance(ui) {
   'use strict';
+
+  var React = ui.Core.React,
+    _ = ui.Core._;
 
   return {
     propTypes: {

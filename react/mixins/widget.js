@@ -1,6 +1,10 @@
-function Widget() {
-  'use strict';
 
+
+function Widget(ui) {
+  'use strict';
+  
+  var React = ui.Core.React;
+  
   return {
     propTypes: {
       id: React.PropTypes.string,
