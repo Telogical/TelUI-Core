@@ -1,0 +1,118 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,700,800,400,600");
+
+$brick ?= 30px;
+$line ?= $brick * 0.5; 
+$font-size ?= $line;
+$font-family = 'Open Sans', sans-serif;
+
+_paragraph-margin = $line;
+
+/*Icons*/
+
+@font-face {
+  font-family: 'ui-icon-font';
+  src: url('fonts/ui-icon-font.eot');
+  src: url('fonts/ui-icon-font.eot?#iefix') format('embedded-opentype'), url('fonts/ui-icon-font.woff') format('woff'), url('fonts/ui-icon-font.ttf') format('truetype'), url('fonts/ui-icon-font.svg#ui-icon-font') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body {
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line;
+  font-size: $brick * 0.5;
+  line-height: $line;    
+  color: $color;
+}
+
+p, label {
+  
+  
+}
+p ~ p {
+  margin-top: $line;
+}
+
+_h1 = 2
+h1 {
+  line-height: $line * _h1;
+  font-size: $font-size * _h1;
+}
+_h2 = 1.75
+h2 {
+  line-height: $line * _h2;
+  font-size: $font-size * _h2;
+}
+_h3 = 1.5
+h3 {
+  line-height: $line * _h3;
+  font-size: $font-size * _h3;
+}
+_h4 = 1.25
+h4 {
+  line-height: $line * _h4 ;
+  font-size: $font-size * _h4 ;
+}
+_h5 = 1.1
+h5 {
+  line-height: $line * _h5;
+  font-size: $font-size * _h5;
+}
+
+h6 {
+  line-height: $line;
+  font-size: $font-size;
+}
+
+dt-width = $brick * 7;
+_list-color = darken($color-default, $interactivityTolerance)
+
+/*
+dl
+  border: $border-width solid $color-default;
+  padding: $line-margin;
+  border-radius: $border-radius
+ */ 
+dt
+  padding: $line-margin;
+  float: left;
+  clear: left;
+  width: dt-width;
+  text-align: right;
+  margin: 0 $line-margin;
+  color: _list-color;
+  min-height: $brick;
+  
+    
+dd 
+  margin: 0 0 0 (dt-width + $line-margin);
+  padding: $line-margin;
+  min-height: $brick;
+  
+dd > ul
+  list-style: none;
+  >li
+    &:before 
+      content: "• ";
+      color: _list-color;
+
+/*helpers*/
+.ui-typography-textalign-center 
+  text-align: center;
+
+.ui-typography-textalign-top 
+  vertical-align: top;
+
+.ui-typography-textalign-right 
+  text-align: right;
+
+.ui-typography-textalign-left 
+  text-align: left;
+
+.ui-typography-textalign-center.ui-icon 
+  display: inline-block;
+
+.ui-typography-uppercase 
+  text-transform: uppercase;

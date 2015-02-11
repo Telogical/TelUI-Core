@@ -1,0 +1,42 @@
+@import 'nib'
+@import '_config.styl'
+
+
+box-sizing()
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+
+legibleTextColor(color)
+  if light(color)
+    color: #111;
+  else
+    color: #eee;
+
+
+ui-states(root, selectors, ui-states, i-states, tolerance)
+  for selector in selectors
+    for key, ui-state in ui-states
+      stateSelector = '.ui-state-' + key
+      for ikey, i-state in i-states
+        {root}
+            &{stateSelector}
+              if ikey != 'focus'
+                {selector}.ui-state-{ikey}
+                  i-state(ui-state, tolerance, key, ikey)
+              if ikey != 'default'
+                {selector}:{ikey}
+                  i-state(ui-state, tolerance, key, ikey)
+
+opacity(n)  
+  -moz-opacity n
+  -khtml-opacity n  
+  opacity n
+  if support-for-ie
+    -ms-filter unquote('"progid:DXImageTransform.Microsoft.Alpha(Opacity=' + round(n * 100) + ')"')
+    filter unquote('alpha(opacity=' + round(n * 100) + ')')
+ 
+   
+
+      
+              
