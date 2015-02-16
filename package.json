@@ -18,12 +18,16 @@
   "bugs": {
     "url": "https://github.com/Telogical/telui-core/issues"
   },
-  "dependencies":{
+  "dependencies": {
     "lodash": "2.x.x",
     "react": "0.11.x"
   },
   "peerDependencies": {
     "angular": "1.2.x"
   },
-  "homepage": "https://github.com/Telogical/telui-core"  
+  "devDependencies": {
+    "nib": "*",
+    "waffles" : "*"
+  },
+  "homepage": "https://github.com/Telogical/telui-core"
 }
