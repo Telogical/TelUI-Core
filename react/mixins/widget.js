@@ -41,10 +41,10 @@ function Widget(ui) {
         w = elem.offsetWidth,
         h = elem.offsetHeight;
 
-      while (elem = elem.offsetParent) {
-        x += elem.offsetLeft;
-        y += elem.offsetTop;
-      }
+//      while (elem = elem.offsetParent) {
+//        x += elem.offsetLeft;
+//        y += elem.offsetTop;
+//      }
 
       return {
         left: x,
