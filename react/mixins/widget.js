@@ -41,10 +41,18 @@ function Widget(ui) {
         w = elem.offsetWidth,
         h = elem.offsetHeight;
 
-//      while (elem = elem.offsetParent) {
-//        x += elem.offsetLeft;
-//        y += elem.offsetTop;
-//      }
+      while (elem = elem.offsetParent) {
+        var position = window.getComputedStyle(elem).position,
+          okToCalculate = !(
+            position === 'absolute' || 
+            position === 'fixed'
+          );
+        
+        if (okToCalculate) {
+          x += elem.offsetLeft;
+          y += elem.offsetTop;
+        }
+      }
 
       return {
         left: x,
